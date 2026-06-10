@@ -1,0 +1,95 @@
+/* footer corregido a mi gusto lo di vuelta verticalmente */
+.footer-atr {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-header, 100);
+    background: #000;
+    color: #FFD700;
+    border-top: 3px solid #000;
+}
+
+.footer-toggle {
+    width: 100%;
+    background: #000;
+    color: #FFD700; 
+    border: none;
+    padding: 1rem;
+    font-weight: 900;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-toggle:hover {
+    background: #1a1a1a;
+}
+
+.footer-toggle .flecha {
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.footer-atr.abierto .flecha {
+    transform: rotate(180deg);
+    /* ▼ cuando abre */
+}
+
+.footer-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: #14729e;
+}
+
+.footer-atr.abierto .footer-content {
+    max-height: 300px;
+    /* Ajustá si tenés más contenido */
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.footer-grid h4 {
+    margin-bottom: 1rem;
+    color: #FFD700;
+    font-size: 1rem;
+}
+
+.footer-grid a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    padding: 0.3rem 0;
+    font-size: 0.85rem;
+}
+
+.footer-grid a:hover {
+    color: #af279d;
+    text-decoration: underline;
+}
+
+.color {
+    color: white;
+}
+
+/* Mobile: que no tape todo */
+@media (max-width: 768px) {
+    .footer-atr.abierto .footer-content {
+        max-height: 60vh;
+        overflow-y: auto;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+}

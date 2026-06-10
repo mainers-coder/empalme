@@ -1,0 +1,371 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.Rvrevista-atr {
+    --verde: #12b10c;
+    --negro: #0a0a0a;
+    --celeste: #14729e;
+    --morado-diario: #690fbd;
+    --blanco: #f5f5f5;
+
+    background: var(--celeste);
+    color: var(--blanco);
+    padding: 2rem 02.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.Rvcabecera-diario {
+    text-align: center;
+    border-top: 3px solid var(--verde);
+    border-bottom: 3px solid var(--verde);
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+}
+
+.Rvfecha-edicion {
+    font-size: 0.8rem;
+    color: var(--blanco);
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.Rvlogo-revista {
+    font-size: clamp(2rem, 8vw, 4rem);
+    font-weight: 900;
+    letter-spacing: -2px;
+    margin: 0;
+    text-shadow: -4px -1px 0 #f11646;
+}
+
+.Rvlogo-revista span {
+    color: var(--verde);
+}
+
+.Rvlema {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    color: var(--blanco);
+    text-transform: uppercase;
+}
+
+.Rvtitular-container {
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.Rvtitular-auto {
+    font-size: clamp(1.2rem, 5vw, 2rem);
+    font-weight: 500;
+    line-height: 1.1;
+    max-width: 800px;
+    color: #Fafafa;
+    text-shadow:
+        -2px -1px 0 #f11646;
+}
+
+.Rvcursor {
+    color: var(--amarillo);
+    animation: blink 1s infinite;
+    font-weight: 300;
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+.Rvpremium {
+    max-width: 340px;
+    margin: 1rem auto;
+    background: #1a1a1a;
+    border: 2px solid #45cf4c;
+    border-radius: 12px;
+    overflow: hidden
+}
+
+.Rvmenu-card {
+    background: #0a0a0a
+}
+
+.Rvbtn-menu {
+    display: none
+}
+
+.Rvhamburguesa {
+    display: block;
+    padding: .6rem 1rem;
+    color: #FFD700;
+    cursor: pointer;
+    font-weight: 700
+}
+
+.Rvmenu-desplegable {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height.3s;
+    background: #1a1a1a
+}
+
+.Rvbtn-menu:checked~.Rvmenu-desplegable {
+    max-height: 150px
+}
+
+.Rvmenu-desplegable a {
+    display: block;
+    padding: .7rem 1rem;
+    color: #fff;
+    text-decoration: none;
+    border-top: 1px solid #333
+}
+
+.Rvmenu-desplegable a:hover {
+    color: #af279d;
+    text-decoration: underline;
+}
+
+.Rvgrid-emprendedores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.Rvcard-emprendedor {
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin: 30px -10px;
+}
+
+.Rvcard-emprendedor.Rvclasica {
+    background: #fff;
+    color: #111;
+}
+
+.Rvcard-emprendedor.Rvclasica img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.Rvcard-emprendedor.Rvclasica {
+    padding: 1.5rem;
+}
+
+.Rvcontenido {
+    padding: 15px;
+    font-size: 23px;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.Rvcard-emprendedor.Rvclasica.Rvtag {
+    background: #eee;
+    color: #333;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.Rvcard-emprendedor.Rvclasica h3 {
+    margin: 0.75rem 0;
+}
+
+.Rvcard-emprendedor.Rvclasica p {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.Rvcard-emprendedor.Rvclasica.Rvbtn-wa {
+    color: #111;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.Rvcard-emprendedor.Rvcaballo {
+    background: var(--morado-diario);
+    border: 2px solid #222;
+    color: #fff;
+}
+
+.Rvcard-emprendedor.Rvcaballo:hover {
+    transform: translateY(-8px);
+    border-color: var(--verde);
+}
+
+.Rvfoto-caballo {
+    position: relative;
+}
+
+.Rvfoto-caballo img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.Rvbadge-fuego {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--verde);
+    color: #000;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 900;
+}
+
+.Rvcard-emprendedor.Rvcaballo.Rvcontenido {
+    padding: 1.5rem;
+}
+
+.Rvcard-emprendedor.Rvcaballo h3 {
+    color: var(--verde);
+    margin: 0 0 0.5rem 0;
+}
+
+.Rvcard-emprendedor.Rvcaballo.Rvslogan {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.Rvfooter-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Rvcard-emprendedor.Rvcaballo.Rvtag {
+    color: #888;
+    font-size: 0.8rem;
+}
+
+/*.Rvbtn-wa-gold {
+    color: var(--verde);
+    font-weight: 700px;
+    text-decoration: none;
+}*/
+
+.Rvcarrusel {
+    border: rgb(60, 18, 175);
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.Rvslides,
+.Rvslide {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.Rvslide {
+    position: absolute;
+    /* object-fit: cover; */
+    opacity: 0;
+    transition: opacity.5s;
+}
+
+.Rvslide.Rvactive {
+    opacity: 1;
+}
+
+.Rvprev,
+.Rvnext {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, .6);
+    color: #45cf4c;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.Rvprev {
+    left: 5px;
+    opacity: 10%;
+}
+
+.Rvnext {
+    right: 5px;
+    opacity: 10%;
+}
+
+.Rvcontenido-card {
+    padding: 1rem;
+    text-align: center;
+    color: rgba(17, 7, 146, 0.959);
+}
+
+.Rvbtn-wsp {
+    display: inline-block;
+    background: #25D366;
+    color: rgb(255, 255, 255);
+    padding: .7rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700px;
+}
+
+.Rvbanner-cta {
+    background: var(--morado-diario);
+    border: 2px dashed var(--verde);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.Rvbtn-cta-caballo {
+    display: inline-block;
+    background: var(--verde);
+    color: #000;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-weight: 900;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.Rv1btn-border,
+.Rv2btn-border,
+.Rv3btn-border {
+    padding: 12px 30px;
+    border: 2px solid #d4af37;
+    color: #d4af37;
+    background: transparent;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s;
+    margin: 40px 5px;
+}
+
+.Rv1btn-border:hover,
+.Rv2btn-border:hover,
+.Rv3btn-border:hover {
+    background: #7958d4;
+    color: rgb(175, 209, 183);
+    border: 2px solid #534761;
+}
