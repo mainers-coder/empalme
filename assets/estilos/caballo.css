@@ -399,3 +399,65 @@ footer {
     padding:20px;
     font-size:13px;
 }
+
+
+  .twrap{max-width:600px;
+margin:0 auto;}
+  .theader{background:linear-gradient(135deg, var(--gris), var(--azul));
+padding:32px 20px;
+text-align:center;
+color:var(--blanco);}
+  .theader .th1{font-size:26px;
+margin-bottom:8px;}
+  .theader .tp{font-size:16px;
+opacity:.9;}
+  .tbtn{display:inline-block;
+background:var(--azul);
+color:var(--blanco);
+padding:14px 22px;
+border-radius:8px;
+text-decoration:none;
+font-weight:700;
+margin-top:16px;}
+  .tsection{padding:28px 20px;}
+  .th2{font-size:22px;
+margin-bottom:12px;
+text-align:center;}
+  .tgrid{display:grid;
+grid-template-columns:1fr;
+gap:16px;} /* 1 columna para fotos grandes */
+  .tcard{background:#F7FAFC;
+border:1px solid #E2E8F0;
+border-radius:12px;
+padding:12px;}
+  .tcard img{width:100%;
+height:180px;
+object-fit:cover;
+border-radius:8px;
+background:#ddd;}
+  .tcard .th3{font-size:18px;
+margin:10px 0 4px;}
+  .tdesc{font-size:14px;
+color:#4A5568;
+margin-bottom:6px;}
+  .tprecio{font-weight:800;
+font-size:18px;color:var(--azul);}
+  .tbeneficios{display:flex;
+flex-direction:column;gap:10px;
+margin-top:12px;}
+  .tbeneficio{background:#EDF2F7;
+padding:12px;border-radius:8px;
+font-size:14px;}
+  .tfooter{background:#1A202C;
+color:#A0AEC0;text-align:center;
+padding:20px;font-size:13px;}
+  .twhatsapp{position:fixed;
+bottom:16px;right:16px;
+background:#25D366;
+color:#fff;padding:14px;
+border-radius:50%;
+text-decoration:none;
+font-weight:700;
+box-shadow:0 4px 12px rgba(0,0,0,.2)
+}
+
