@@ -419,7 +419,8 @@ border-radius:8px;
 text-decoration:none;
 font-weight:700;
 margin-top:16px;}
-  .tsection{padding:28px 20px;}
+  .tsection{padding:28px 20px;
+      background:#2B6CB0;}
   .th2{font-size:22px;
 margin-bottom:12px;
 text-align:center;}
