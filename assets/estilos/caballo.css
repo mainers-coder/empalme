@@ -342,7 +342,7 @@ body {
     color: rgba(17, 7, 146, 0.959);
 }
 
-.Rvbtn-wsp {
+/*.Rvbtn-wsp {
     display: inline-block;
     background: #25D366;
     color: rgb(255, 255, 255);
@@ -350,7 +350,7 @@ body {
     border-radius: 50px;
     text-decoration: none;
     font-weight: 700px;
-}
+}*/
 
 .Rvbanner-cta {
     background: var(--morado-diario);
