@@ -375,22 +375,30 @@ body {
 .Rv2btn-border,
 .Rv3btn-border {
     padding: 8px 5px;
-    border: 2px solid #d4af37;
-    color: #d4af37;
-    background: transparent;
-    border-radius: 8px;
-    font-size: 1rem;
-    text-decoration: none;
-    transition: all 0.3s;
     margin: 40px 5px;
+    /*font-weight: bold;*/
+    font-size: 16px;
+    color: red;
+    background-color: green;
     /*Posiciona el fondo transparente al inicio*/
-    background-position: right bottom;
+  background-position: right bottom;
+/*Duplica el tamaño del fondo*/
+  background-size: 200% 100%;
+  background-image: linear-gradient(to right, #007bff 50%, transparent 50%);  
+ /*background: transparent;*/
+ border: 2px solid #007bff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.4s ease-out;
 }
 
 .Rv1btn-border:hover,
 .Rv2btn-border:hover,
 .Rv3btn-border:hover {
-    color: lime;
+    color: black;
     background-color: blue;
     /* Desplaza el fondo azul hacia el centro */
     background-position: left bottom;
