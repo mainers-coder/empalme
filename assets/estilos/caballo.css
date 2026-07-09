@@ -144,8 +144,8 @@ body {
 
 .Rvbtn-menu:checked~.Rvmenu-desplegable {
     max-height: 150px;
-    padding: 2px 0px 8px;
-    margin: 2px 0px 8px;
+    padding: 3px 2px;
+    margin: 3px 2px;
 }
 
 .Rvmenu-desplegable a {
@@ -355,13 +355,13 @@ body {
     margin-top: 1rem;
 }
 
-/*.Rvbtn-wa-gold {
+.Rvbtn-wa-gold {
     color: var(--verde);
     font-weight: 700px;
     text-decoration: none;
-}*/
+}
 
-/*.Rvbtn-wsp {
+.Rvbtn-wsp {
     display: inline-block;
     background: #25D366;
     color: var(--verde);
@@ -369,7 +369,7 @@ body {
     border-radius: 50px;
     text-decoration: none;
     font-weight: 700px;
-}*/
+}
 
 .Rv1btn-border,
 .Rv2btn-border,
