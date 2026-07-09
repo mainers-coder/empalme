@@ -374,8 +374,8 @@ body {
 .Rv1btn-border,
 .Rv2btn-border,
 .Rv3btn-border {
-    padding: .7rem 1.5rem;
-    margin: 40px 5px;
+    padding: .7rem .5rem;
+    margin: 10px 5px;
     /*font-weight: bold;*/
     /*font-size: 16px;*/
     font-weight: 100px;
