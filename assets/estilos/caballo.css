@@ -281,12 +281,6 @@ body {
     font-size: 0.8rem;
 }
 
-/*.Rvbtn-wa-gold {
-    color: var(--verde);
-    font-weight: 700px;
-    text-decoration: none;
-}*/
-
 .Rvcarrusel {
     border: rgb(60, 18, 175);
     position: relative;
@@ -342,16 +336,6 @@ body {
     color: rgba(17, 7, 146, 0.959);
 }
 
-/*.Rvbtn-wsp {
-    display: inline-block;
-    background: #25D366;
-    color: rgb(255, 255, 255);
-    padding: .7rem 1.5rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 700px;
-}*/
-
 .Rvbanner-cta {
     background: var(--morado-diario);
     border: 2px dashed var(--verde);
@@ -371,13 +355,30 @@ body {
     margin-top: 1rem;
 }
 
+/*.Rvbtn-wa-gold {
+    color: var(--verde);
+    font-weight: 700px;
+    text-decoration: none;
+}*/
+
+/*.Rvbtn-wsp {
+    display: inline-block;
+    background: #25D366;
+    color: var(--verde);
+    padding: .7rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700px;
+}*/
+
 .Rv1btn-border,
 .Rv2btn-border,
 .Rv3btn-border {
     padding: .7rem 1.5rem;
     margin: 40px 5px;
     /*font-weight: bold;*/
-    font-size: 16px;
+    /*font-size: 16px;*/
+    font-weight: 700px;
     color: red;
     background-color: green;
     /*Posiciona el fondo transparente al inicio*/
