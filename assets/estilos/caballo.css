@@ -374,7 +374,7 @@ body {
 .Rv1btn-border,
 .Rv2btn-border,
 .Rv3btn-border {
-    padding: 8px 5px;
+    padding: .7rem 1.5rem;
     margin: 40px 5px;
     /*font-weight: bold;*/
     font-size: 16px;
@@ -398,7 +398,7 @@ body {
 .Rv1btn-border:hover,
 .Rv2btn-border:hover,
 .Rv3btn-border:hover {
-    color: black;
+    color: green;
     background-color: blue;
     /* Desplaza el fondo azul hacia el centro */
     background-position: left bottom;
