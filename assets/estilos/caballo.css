@@ -384,12 +384,10 @@ body {
   background-position: right bottom;
   background-image: linear-gradient(to right, #007bff 50%, transparent 50%);  
  /*background: transparent;*/
- border: 2px solid #007bff;
   border: none;
   border-radius: 30px;
   cursor: pointer;
   text-transform: uppercase;
-  letter-spacing: 2px;
   transition: all 0.4s ease-out;
 }
 
@@ -400,8 +398,6 @@ body {
     background-color: blue;
     /* Desplaza el fondo azul hacia el centro */
     background-position: left bottom;
-    /* Crea el efecto de iluminación inferior */
-    box-shadow: 0 8px 20px rgba(98, 0, 238, 0.4); 
 }
 
 footer {
