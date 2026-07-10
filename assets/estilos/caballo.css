@@ -380,6 +380,8 @@ body {
     font-size: 7px;
     color: red;
     background-color: green;
+    /*Duplica el tamaño del fondo*/
+    background-size: 200% 100%;
     /*Posiciona el fondo transparente al inicio*/
   background-position: right bottom;
   background-image: linear-gradient(to right, #007bff 50%, transparent 50%);  
