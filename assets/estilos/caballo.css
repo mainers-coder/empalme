@@ -384,14 +384,14 @@ body {
     /*Duplica el tamaño del fondo*/
     background-size: 200% 100%;
     /*Posiciona el fondo transparente al inicio*/
-  background-position: right bottom;
-  background-image: linear-gradient(to right, #007bff 50%, transparent 50%);  
- /*background: transparent;*/
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: all 0.4s ease-out;
+    background-position: right bottom;
+    background-image: linear-gradient(to right, #007bff 50%, transparent 50%);  
+    /*background: transparent;*/
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.4s ease-out;
 }
 
 .Rv1btn-border:hover,
@@ -401,6 +401,7 @@ body {
     background-color: blue;
     /* Desplaza el fondo azul hacia el centro */
     background-position: left bottom;
+    background-image: linear-gradient(to right, #007bff 50%, transparent 50%);
 }
 
 footer {
