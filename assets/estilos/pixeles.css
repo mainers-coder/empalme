@@ -10,6 +10,10 @@
 @media screen and (max-width: 430px) {
 
   }
+
+@media screen and (max-width: 540px) {
+body {background-color: red;}
+  }
 @media screen and (max-width: 768px) {
 
   }
