@@ -2,6 +2,6 @@
 .Rvrevista-atr {background-color: red;}
   }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 1092px) {
 .Rvrevista-atr {background-color: lime;}
   }
