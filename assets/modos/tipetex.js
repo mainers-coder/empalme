@@ -1,6 +1,6 @@
 
 const frases = [
-    "Bienvenido a Revista RGBY -Web",
+    "Bienvenido a Revista RGBY-Web",
     "Para Emprendedores, Comerciantes y Profecionales",
     "Consulta Nuestras Promociones",
     "Publicaciones Especiales: Casamientos, Cumpleaños y/o Eventos",
