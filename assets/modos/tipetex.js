@@ -1,6 +1,6 @@
 
 const frases = [
-    "Bienvenido a Revista Caballo de Fuego",
+    "Bienvenido a Revista RGBY -Web",
     "Para Emprendedores, Comerciantes y Profecionales",
     "Consulta Nuestras Promociones",
     "Publicaciones Especiales: Casamientos, Cumpleaños y/o Eventos",
