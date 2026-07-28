@@ -404,14 +404,6 @@ body {
     background-image: linear-gradient(to right, #007bff 50%, transparent 50%);
 }
 
-footer {
-    background:#1A202C;
-    color:#A0AEC0;
-    text-align:center;
-    padding:20px;
-    font-size:13px;
-}
-
 
   
 .twrap {
@@ -510,7 +502,7 @@ footer {
     background:#1A202C;
     color:#A0AEC0;
     text-align:center;
-    padding:20px;
+    padding: 5px 10px;
     font-size:13px;
 }
   
