@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./assets/estilos/Carrusel Intervalo">
-    <link rel="stylesheet" href="./assets/estilos/Galeria Imagenes">
-    <link rel="stylesheet" href="./assets/estilos/Invitacion Unirme">
-
-     <title>Peluqueria Canina</title>
+   <link rel="stylesheet" href="./assets/estilos/Carrusel Intervalo/style.css">
+    <link rel="stylesheet" href="./assets/estilos/Galeria Imagenes/style.css">
+    <link rel="stylesheet" href="./assets/estilos/Invitacion Unirme/style.css">
+    <link rel="stylesheet" href="./assets/estilos/Nuestro Equipo/style.css">
+    <link rel="stylesheet" href="">
 
     <style>
         .carrusel {
@@ -443,89 +443,10 @@
         </div>
     </footer>
 
-    <script>
-        const ctaButton = document.querySelector('.cta-button');
-        ctaButton.addEventListener('mouseover', () => {
-            ctaButton.style.boxShadow = '0 0 20px rgba(0, 0, 0, 0.2)';
-        });
-        ctaButton.addEventListener('mouseout', () => {
-            ctaButton.style.boxShadow = 'none';
-        });
-    </script>
-
-    <script>
-        const miembros = document.querySelectorAll('.miembro');
-        miembros.forEach((miembro) => {
-            miembro.addEventListener('mouseover', () => {
-                miembro.style.transform = 'scale(1.1)';
-                miembro.style.transition = 'transform 0.3s';
-            });
-            miembro.addEventListener('mouseout', () => {
-                miembro.style.transform = 'scale(1)';
-                miembro.style.transition = 'transform 0.3s';
-            });
-        });
-    </script>
-
-    <script>
-        const galeriaItems = document.querySelectorAll('.galeria-item');
-        galeriaItems.forEach((item) => {
-            item.addEventListener('mouseover', () => {
-                item.style.transform = 'scale(1.1)';
-                item.style.transition = 'transform 0.3s';
-            });
-            item.addEventListener('mouseout', () => {
-                item.style.transform = 'scale(1)';
-                item.style.transition = 'transform 0.3s';
-            });
-        });
-    </script>
-
-    <script>
-        const carrusel = document.querySelector('.carrusel');
-        const imagenes = document.querySelectorAll('.carrusel-imagenes img');
-        const indicadores = document.querySelectorAll('.indicador');
-        let indice = 0;
-        let intervalo;
-        function cambiarImagen() {
-            imagenes.forEach((imagen, i) => {
-                if (i === indice) {
-                    imagen.classList.add('activo');
-                    imagen.classList.remove('no-activo');
-                } else {
-                    imagen.classList.remove('activo');
-                    imagen.classList.add('no-activo');
-                }
-            });
-            indicadores.forEach((indicador, i) => {
-                if (i === indice) {
-                    indicador.classList.add('activo');
-                } else {
-                    indicador.classList.remove('activo');
-                }
-            });
-        }
-        function iniciarCarrusel() {
-            intervalo = setInterval(() => {
-                indice = (indice + 1) % imagenes.length;
-                cambiarImagen();
-            }, 3000);
-        }
-        function detenerCarrusel() {
-            clearInterval(intervalo);
-        }
-        carrusel.addEventListener('mouseover', detenerCarrusel);
-        carrusel.addEventListener('mouseout', iniciarCarrusel);
-        indicadores.forEach((indicador, i) => {
-            indicador.addEventListener('click', () => {
-                indice = i;
-                cambiarImagen();
-                detenerCarrusel();
-                iniciarCarrusel();
-            });
-        });
-        iniciarCarrusel();
-    </script>
+    <script src="./assets/modos/Carrusel Intervalo/script.js"></script>
+<script src="./assets/modos/Galeria Imagenes/script.js"></script>
+<script src="./assets/modos/Invitacion Unirme/script.js"></script>
+<script src="./assets/modos/Nuestro Equipo/script.js"></script>
 
 </body>
 
