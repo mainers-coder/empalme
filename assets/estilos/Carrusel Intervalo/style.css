@@ -1,0 +1,68 @@
+ /* Carrusel Intervalo */
+ .carrusel {
+    position: relative;
+    width: 80%;
+    margin: 40px auto;
+}
+
+.carrusel-imagenes {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.carrusel-imagenes img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1s;
+}
+
+.carrusel-imagenes img.activo {
+    opacity: 1;
+}
+
+.carrusel-imagenes img.no-activo {
+    opacity: 0;
+}
+
+.carrusel-indicadores {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.indicador {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicador.activo {
+    background-color: #333;
+}
+
+@media (max-width: 768px) {
+    .carrusel {
+        width: 90%;
+    }
+    .carrusel-imagenes {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carrusel {
+        width: 100%;
+    }
+    .carrusel-imagenes {
+        height: 200px;
+    }
+}

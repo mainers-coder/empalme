@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="">
+
+    <title>Document</title>
+
+    <style>
+        /* Invitacion Unirme */
+        .cta {
+            max-width: 1200px;
+            margin: 40px auto;
+            text-align: center;
+            background-color: #f9f9f9;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s;
+        }
+
+        .cta h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .cta-button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 20px 40px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #3e8e41;
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cta {
+                padding: 20px;
+            }
+
+            .cta h2 {
+                font-size: 24px;
+            }
+
+            .cta p {
+                font-size: 16px;
+            }
+
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 16px;
+            }
+        }
+    </style>
+
+    <style>
+        /* Nuestro Equipo */
+        .equipo {
+            max-width: 1200px;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .miembro-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .miembro {
+            width: 25%;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .miembro img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .miembro h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .miembro p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .redes-sociales {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .redes-sociales li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .redes-sociales a {
+            color: #337ab7;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .miembro {
+                width: 50%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .miembro {
+                width: 100%;
+            }
+        }
+    </style>
+
+    <style>
+        /* Galeria Imagenes */
+        .galeria {
+            max-width: 1200px;
+            margin: 30px auto;
+            text-align: center;
+            font-size: 21px;
+            text-anchor: middle;
+        }
+
+        .galeria-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .galeria-item {
+            width: 25%;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .galeria-item img {
+            width: 100%;
+            height: auto;
+            /*object-fit: cover;*/
+            border-radius: 10px 10px 0 0;
+
+            overflow: hidden;
+            height: 300px;
+            transition: opacity 1s;
+        }
+
+        .galeria-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            margin-left: -20px;
+        }
+
+        .galeria-item:hover .galeria-overlay {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .galeria-item {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .galeria-item {
+                width: 100%;
+            }
+
+            .galeria {
+                max-width: 400px;
+                font-size: 17px;
+            }
+        }
+    </style>
+
+    <style>
+        .carrusel {
+            position: relative;
+            width: 100%;
+            margin: 40px auto;
+        }
+
+        .carrusel-imagenes {
+            position: sticky;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .carrusel-imagenes img {
+            position: absolute;
+            width: 100%;
+            height: 500px;
+            transition: opacity 1s;
+        }
+
+        .carrusel-imagenes img.activo {
+            opacity: 1;
+        }
+
+        .carrusel-imagenes img.no-activo {
+            opacity: 0;
+        }
+
+        .carrusel-indicadores {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .indicador {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #ccc;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .indicador.activo {
+            background-color: #333;
+        }
+
+        @media ( max-width: 1024px) {
+            .carrusel {
+                width: 90%;
+            }
+
+            .carrusel-imagenes {
+                position: sticky;
+                width: 100%;
+                height: 350px;
+                overflow: hidden;
+            }
+
+            .carrusel-imagenes img {
+                position: absolute;
+                width: 100%;
+                height: 350px;
+                transition: opacity 1s;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .carrusel {
+                width: 90%;
+            }
+
+            .carrusel-imagenes {
+                position: sticky;
+                width: 100%;
+                height: 350px;
+                overflow: hidden;
+            }
+
+            .carrusel-imagenes img {
+                position: absolute;
+                width: 100%;
+                height: 350px;
+                transition: opacity 1s;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carrusel {
+                width: 100%;
+            }
+
+            .carrusel-imagenes {
+                position: sticky;
+                width: 100%;
+                height: 200px;
+                overflow: hidden;
+            }
+
+            .carrusel-imagenes img {
+                position: absolute;
+                width: 100%;
+                height: 200px;
+                transition: opacity 1s;
+            }
+        }
+    </style>
+
+    <style>
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 0;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .footer-column {
+            width: 25%;
+            padding: 20px;
+        }
+
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-column li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-column a:hover {
+            color: #ccc;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            background-color: #222;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        @media screen and (max-width: 768px) {
+            .footer-column {
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .footer-column {
+                width: 100%;
+            }
+        }
+    </style>
+
+    <title>Peluqueria Canina</title>
+
+</head>
+
+<body>
+
+    <div class="carrusel">
+        <div class="carrusel-imagenes">
+            <img src="./assets/camara/quechulos/ladridos (8).webp" alt="Imagen 1">
+            <img src="./assets/camara/quechulos/ladridos (6).webp" alt="Imagen 2">
+            <img src="./assets/camara/quechulos/ladridos (3).webp" alt="Imagen 3">
+        </div>
+        <div class="carrusel-indicadores">
+            <span class="indicador"></span>
+            <span class="indicador"></span>
+            <span class="indicador"></span>
+        </div>
+    </div>
+
+    <section class="cta">
+        <h2>¡Alejandro Korn - San Vicente!</h2>
+        <p>Peluqueria Canina<br></p>
+        <a href="https://wa.me/5491100000000" target="_blank"><button class="cta-button">WhatsApp</button></a>
+    </section>
+    <br>
+    <br>
+    <br>
+    <section class="galeria">
+        <h1>Nuestro servicios</h1>
+        <p>1. Stripping Profesional: Es una técnica manual para perros de pelo duro (como Schnauzers o Terriers) que
+            extrae el pelo muerto para mantener la textura y color original.</p>
+        <p>Dermo-Grooming: Especializados en baños terapéuticos para pieles sensibles o con dermatitis, utilizando
+            productos que ayuden a la recuperación del folículo.</p>
+        <p>Modelado Anatómico: Cortes que resaltan la estructura ideal de cada raza, aplicando "ciencia y arte" para que
+            el perro luzca su mejor versión.</p>
+        <p>2. Bienestar nuestro servicio se transformá en una experiencia de "día de spa" para quienes buscan lo mejor
+            para su mascota:
+            Ozonoterapia: Baños con ozono que tienen efectos antiparasitarios, antiinflamatorios y relajantes.</p>
+        <p>Aromaterapia y Masajes: Uso de aceites esenciales seguros para perros que ayudan a reducir el estrés durante
+            la sesión.</p>
+        <p>Higiene Dental Avanzada: Limpieza básica para prevenir el sarro.</p>
+        <p>3. Catálogo de "Antes y Después": fotos que demuestran el cambio radical y el cuidado
+            en los detalles.</p>
+        <p>Asesoría Personalizada: al dueño en el estado del manto y qué necesita su perro específicamente.</p>
+        <p>Mantenemos en Reserva: La ficha de atencion a su mascota con los servicios y niveles requerido,<br> como la
+            higiene esencial del (baño, uñas, oídos, corte sanitario) Full, Básico y/o VIP/Spa.</p>
+
+
+
+
+        <div class="galeria-container">
+            <div class="galeria-item">
+                <img src="./assets/camara/quechulos/2-baño.webp" alt="Imagen 1" width="300" height="300">
+                <div class="galeria-overlay">
+                    <h3>cariño y respeto</h3>
+                    <p>Baño completo.</p>
+                </div>
+            </div>
+            <div class="galeria-item">
+                <img src="./assets/camara/quechulos/1-baño.webp" alt="Imagen 2" width="300" height="300">
+                <div class="galeria-overlay">
+                    <h3>cariño y respeto</h3>
+                    <p>Emjuague.</p>
+                </div>
+            </div>
+            <div class="galeria-item">
+                <img src="./assets/camara/quechulos/15-baño.jpg" alt="Imagen 3" width="300" height="300">
+                <div class="galeria-overlay">
+                    <h3>cariño y respeto</h3>
+                    <p>jagando con su crema.</p>
+                </div>
+            </div>
+
+            <div class="galeria-item">
+                <img src="./assets/camara/quechulos/22-baño.jpg" alt="Imagen 4" width="300" height="300">
+                <div class="galeria-overlay">
+                    <h3>cariño y respeto</h3>
+                    <p>Posando para su foto de perfil.</p>
+                </div>
+            </div>
+            <div class="galeria-item">
+                <img src="./assets/camara/quechulos/7-baño.jpg" alt="Imagen 5" width="300" height="300">
+                <div class="galeria-overlay">
+                    <h3>cariño y respeto</h3>
+                    <p>.</p>
+                </div>
+            </div>
+            <div class="galeria-item">
+                <img src="./assets/camara/quechulos/9-baño.jpg" alt="Imagen 6" width="300" height="300">
+                <div class="galeria-overlay">
+                    <h3>cariño y respeto</h3>
+                    <p>.</p>
+                </div>
+            </div>
+            <div class="galeria-item">
+                <img src="./assets/camara/quechulos/10-baño.jpg" alt="Imagen 7" width="300" height="300">
+                <div class="galeria-overlay">
+                    <h3>cariño y respeto</h3>
+                    <p>.</p>
+                </div>
+            </div>
+            <div class="galeria-item">
+                <img src="./assets/camara/quechulos/11-baño.jpg" alt="Imagen 8" width="300" height="300">
+                <div class="galeria-overlay">
+                    <h3>cariño y respeto</h3>
+                    <p>cargo aqui redacción de mi cliente.</p>
+                </div>
+            </div>
+            <div class="galeria-item">
+                <img src="./assets/camara/quechulos/13-baño.jpg" alt="Imagen 9" width="300" height="300">
+                <div class="galeria-overlay">
+                    <h3>cariño y respeto</h3>
+                    <p>cargo aqui redacción de mi cliente.</p>
+                </div>
+            </div>
+            <div class="galeria-item">
+                <img src="./assets/camara/quechulos/4-baño.jpg" alt="Imagen 10" width="300" height="300">
+                <div class="galeria-overlay">
+                    <h3>Icariño y respeto</h3>
+                    <p>cargo aqui redacción de mi cliente.</p>
+                </div>
+            </div>
+            <div class="galeria-item">
+                <img src="./assets/camara/quechulos/5-baño.jpg" alt="Imagen 11" width="300" height="300">
+                <div class="galeria-overlay">
+                    <h3>Icariño y respeto</h3>
+                    <p>Muy Relajado en su Spa.</p>
+                </div>
+            </div>
+            <div class="galeria-item">
+                <img src="./assets/camara/quechulos/16-baño.jpg" alt="Imagen 12" width="300" height="300">
+                <div class="galeria-overlay">
+                    <h3>cariño y respeto</h3>
+                    <p>cargo aqui redacción de mi cliente.</p>
+                </div>
+            </div>
+            <div class="galeria-item">
+                <img src="./assets/camara/quechulos/14-baño.jpg" alt="Imagen 13" width="300" height="300">
+                <div class="galeria-overlay">
+                    <h3>cariño y respeto</h3>
+                    <p>cargo aqui redacción de mi cliente.</p>
+                </div>
+            </div>
+            <div class="galeria-item">
+                <img src="./assets/camara/quechulos/19-baño.jpg" alt="Imagen 14" width="300" height="300">
+                <div class="galeria-overlay">
+                    <h3>cariño y respeto</h3>
+                    <p>cargo aqui redacción de mi cliente.</p>
+                </div>
+            </div>
+            <div class="galeria-item">
+                <img src="./assets/camara/quechulos/20-baño.jpg" alt="Imagen 15" width="300" height="300">
+                <div class="galeria-overlay">
+                    <h3>cariño y respeto</h3>
+                    <p>Peinado lizo.</p>
+                </div>
+            </div>
+            <div class="galeria-item">
+                <img src="./assets/camara/quechulos/21baño.jpg" alt="Imagen 16" width="300" height="300">
+                <div class="galeria-overlay">
+                    <h3>cariño y respeto</h3>
+                    <p>el chiquito malon.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="equipo">
+        <h2>Servicios</h2>
+        <div class="miembro-container">
+            <div class="miembro">
+                <img src="./assets/camara/quechulos/1-Caniche Micro Toy.jpg" alt="caninos">
+                <h3>Caniche Micro Toy</h3>
+                <p>color marron castaño, pelo ondulado, tamaño de 24 a 28 cm, peso 2 kg y 4,5 kg</p>
+                <p>Esta raza puede crear vínculos rápidamente y luego aferrarse a la persona con la que estableció la
+                    primera relación </p>
+                <p>Un caniche micro toy (o toy) tiene una esperanza de vida media de 12 a 15 años, aunque con cuidados
+                    óptimos, buena genética y nutrición, pueden alcanzar los 16 a 18 años o incluso superar los 20.</p>
+                <ul class="redes-sociales">
+                    <li><a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram">Instagram</i></a>
+                    </li>
+                    <li><a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook">Facebook</i></a></li>
+                    <li><a href="https://wa.me/5491100000000" target="_blank"><i class="">WhatsApp</i></a></li>
+                </ul>
+            </div>
+            <div class="miembro">
+                <img src="./assets/camara/quechulos/2-Pastor aleman.jpg" alt="caninos">
+                <h3>Pastor aleman</h3>
+                <p>color del pelaje es doble negro y fuego/bronceado, tamaños y peso del macho de 60-65 cm, 30-40 kg, y
+                    hembra de 55-60 cm y 22-32 kg.</p>
+                <p>Estos perros suelen exhibir una combinación de inteligencia excepcional, lealtad inquebrantable y una
+                    disposición trabajadora.</p>
+                <p>deben tener orejas erguidas (a partir de los 4-6 meses), espalda inclinada, ojos oscuros</p>
+                <ul class="redes-sociales">
+                    <li><a href="https://instagram.com/" target="_blank"><i class="fab fa-linkedin">Instagram</i></a>
+                    </li>
+                    <li><a href="https://facebook.com/" target="_blank"><i class="fab fa-github">Facebook</i></a></li>
+                    <li><a href="https://wa.me/5491100000000" target="_blank"><i class="">WhatsApp</i></a></li>
+                </ul>
+            </div>
+            <div class="miembro">
+                <img src="./assets/camara/quechulos/3-Galgo.jpg" alt="caninos">
+                <h3>Galgo</h3>
+                <p>color marron crema, pelaje corto suave y fino, tamaño y peso del macho 71-76 cm, 30-32 kg, y las
+                    hembras rondan 69-71 cm, pesan entre 27-30 kg.</p>
+                <p>Galgo Español: Criadores enfocados en morfología de campo y estructura tradicional.</p>
+                <p>Galgo Inglés (Greyhound): Muchos pedigrees se centran en la velocidad, a menudo registrados tras
+                    retirarse de las carreras.</p>
+                <ul class="redes-sociales">
+                    <li><a href="https://instagram.com/" target="_blank"><i class="fab fa-twitter">Instagram</i></a>
+                    </li>
+                    <li><a href="https://facebook.com/" target="_blank"><i class="fab fa-github">Facebook</i></a></li>
+                    <li><a href="https://wa.me/5491100000000" target="_blank"><i class="">WhatsApp</i></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Acerca de Nosotros</h3>
+                <p>"PELUQUERIA CANINA" .</p>
+                <p>Sucursal en Alejandro Korn y San Vicente, Buenos Aires</p>
+                <ul>
+                    <li>Baño y masaje</li>
+                    <li>Corte de pelo</li>
+                    <li>Limpieza de orejas</li>
+                    <li>Corte de uñas</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Redes sociales</h3>
+                <ul>
+                    <li><a href="https://x.com/" target="_blank"><b class="fab fa-twitter">Twiter X</b>
+                        </a></li>
+                    <li><a href="https://m.facebook.com/" target="_blank"><b class="fab fa-facebook">Facebook</b>
+                        </a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank"><b class="fab fa-instagram">Instagam</b>
+                        </a></li>
+                </ul>
+            </div>
+            <div class=" footer-column">
+                <h3>Contacto</h3>
+                <p>Dirección: calle 1 entre calle 123 y calle 124, San Vicente, BA</p>
+                <p>Dirección: calle 2 entre calle 78 y calle 24, Alejandro Korn, BA</p>
+                <p>Teléfono: (+549) 01166522996</p>
+                <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>RGBY-Web 2026 &copy; Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const ctaButton = document.querySelector('.cta-button');
+        ctaButton.addEventListener('mouseover', () => {
+            ctaButton.style.boxShadow = '0 0 20px rgba(0, 0, 0, 0.2)';
+        });
+        ctaButton.addEventListener('mouseout', () => {
+            ctaButton.style.boxShadow = 'none';
+        });
+    </script>
+
+    <script>
+        const miembros = document.querySelectorAll('.miembro');
+        miembros.forEach((miembro) => {
+            miembro.addEventListener('mouseover', () => {
+                miembro.style.transform = 'scale(1.1)';
+                miembro.style.transition = 'transform 0.3s';
+            });
+            miembro.addEventListener('mouseout', () => {
+                miembro.style.transform = 'scale(1)';
+                miembro.style.transition = 'transform 0.3s';
+            });
+        });
+    </script>
+
+    <script>
+        const galeriaItems = document.querySelectorAll('.galeria-item');
+        galeriaItems.forEach((item) => {
+            item.addEventListener('mouseover', () => {
+                item.style.transform = 'scale(1.1)';
+                item.style.transition = 'transform 0.3s';
+            });
+            item.addEventListener('mouseout', () => {
+                item.style.transform = 'scale(1)';
+                item.style.transition = 'transform 0.3s';
+            });
+        });
+    </script>
+
+    <script>
+        const carrusel = document.querySelector('.carrusel');
+        const imagenes = document.querySelectorAll('.carrusel-imagenes img');
+        const indicadores = document.querySelectorAll('.indicador');
+        let indice = 0;
+        let intervalo;
+        function cambiarImagen() {
+            imagenes.forEach((imagen, i) => {
+                if (i === indice) {
+                    imagen.classList.add('activo');
+                    imagen.classList.remove('no-activo');
+                } else {
+                    imagen.classList.remove('activo');
+                    imagen.classList.add('no-activo');
+                }
+            });
+            indicadores.forEach((indicador, i) => {
+                if (i === indice) {
+                    indicador.classList.add('activo');
+                } else {
+                    indicador.classList.remove('activo');
+                }
+            });
+        }
+        function iniciarCarrusel() {
+            intervalo = setInterval(() => {
+                indice = (indice + 1) % imagenes.length;
+                cambiarImagen();
+            }, 3000);
+        }
+        function detenerCarrusel() {
+            clearInterval(intervalo);
+        }
+        carrusel.addEventListener('mouseover', detenerCarrusel);
+        carrusel.addEventListener('mouseout', iniciarCarrusel);
+        indicadores.forEach((indicador, i) => {
+            indicador.addEventListener('click', () => {
+                indice = i;
+                cambiarImagen();
+                detenerCarrusel();
+                iniciarCarrusel();
+            });
+        });
+        iniciarCarrusel();
+    </script>
+
+</body>
+
+</html>
