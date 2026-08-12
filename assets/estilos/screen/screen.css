@@ -1,0 +1,75 @@
+@media screen and (max-width: 768px) {
+    .articulo {
+        flex-direction: column;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .aside-1,
+    .aside-2 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .article {
+        padding: 10px;
+    }
+
+    .article-title {
+        font-size: 18px;
+    }
+
+    .article-meta {
+        font-size: 12px;
+    }
+
+    .footer-column {
+        width: 100%;
+    }
+}
+
+/* @media screen and (max-width: 375px) {
+    .section-2 {
+        width: 100%;
+        padding: 0 10px; /-* solo 10px cada lado, no 40px *-/
+        box-sizing: border-box;
+    }
+    
+    .grid {
+        width: 100%; /-* que ocupe todo el section *-/
+        max-width: 355px; /-* 375 - 20px padding *-/
+        margin: 0 auto;
+        grid-template-columns: repeat(2, 1fr); /-* 2 columnas flexibles *-/
+        gap: 5px; /-* menos gap para que entre *-/
+    }
+    
+    .grid-item {
+        width: 100% !important; /-* que se adapte solo *-/
+        height: auto; /-* que el alto sea según contenido *-/
+        max-height: 400px; /-* si 915px es mucho para mobile *-/
+    }
+} */
+
+
+/* @media screen and (max-width: 360px) {
+    .grid {
+        grid-template-columns: 1fr; /-* 1 sola columna, chau problema *-/
+        gap: 12px;
+    }
+} */

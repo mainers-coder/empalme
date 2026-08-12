@@ -1,0 +1,32 @@
+.background-ws {
+position: fixed;
+display:flex;
+align-items: center;
+justify-content: center;
+width: 58px;
+height: 58px;
+bottom: 90px;
+border-radius: 50%;
+overflow: hidden;
+line-height: 58px;
+margin: 0 20px;
+text-align: center;
+background-color: #4dc247;
+box-shadow: 7px 7px 5px rgba(13, 51, 18, 5.4);
+cursor: pointer;
+transition: box-shadow 2s, transform 250ms, filter 250ms ease-in-out;
+}
+
+.background-ws:hover {
+transform: scale(1.1);
+}
+
+.background-ws a {
+color: white;
+font-size: .8rem;
+text-anchor: 300px;
+}
+
+.button-whatsapp-derecha {
+right: 25px;
+}
