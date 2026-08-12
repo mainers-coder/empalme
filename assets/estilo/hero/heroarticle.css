@@ -1,0 +1,163 @@
+ /* hero */
+    /* Título de Leo */
+    .carta-leo {
+        background: linear-gradient(to right, #b8860b, #f2e1a6, #b8860b);
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        margin-left: 7px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+  
+      .hero {
+        margin: 0 auto;
+        font-size: 1.2rem;
+        font-weight: 500;
+        background-color: white;
+        color: #007bff;
+        text-align: center;
+        border-radius: 4px;
+        padding: 40px 0 60px;
+  
+        /*opacity: 88%;*/
+      }
+  
+      .article-header h1 {
+        background: linear-gradient(to right, #b8860b, #f2e1a6, #b8860b);
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        margin-left: 7px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-top: 0;
+        margin-bottom: .5rem;
+        font-weight: 500;
+        line-height: 1.2
+      }
+  
+      .hero h1 {
+        margin: 0px auto;
+        color: rgb(78, 42, 42);
+      }
+  
+      .hero h2 {
+        background: linear-gradient(to right, #b8860b, #f2e1a6, #b8860b);
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        margin-left: 7px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-top: 0;
+        margin-bottom: .5rem;
+        font-weight: 500;
+        line-height: 1.2
+      }
+  
+      #servicios img {
+        border: 1px solid yellow;
+        border-radius: 8%;
+      }
+  
+      /* Párrafos de introducción */
+      .carta-leo-p {
+        text-align: center;
+        line-height: 1.6;
+        font-weight: normal;
+        display: grid;
+        font-size: 1.2rem;
+        gap: 5px;
+        margin: 1em;
+        font-weight: 500;
+      }
+  
+      /* Enlaces y Texto */
+      #servicios a {
+        text-decoration: none;
+        color: #444;
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+  
+      #servicios p {
+        display: grid;
+        gap: 5px;
+        margin: 0.40em 0.40em;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #007bff;
+      }
+  
+      /* SECTOR RESPONSIVE */
+      /* Ajuste para móviles */
+      @media (max-width: 360px) {
+  
+        .logo h1,
+        .logo span {
+          font-size: 1.2rem;
+          letter-spacing: -1px;
+        }
+  
+        .hero h1 {
+          font-size: 1.4rem;
+          margin: 0px auto;
+        }
+  
+        .hero h2 {
+          font-size: 2rem;
+        }
+  
+        .article-header h1 {
+          font-size: 2rem;
+        }
+      }
+  
+      /* Ajuste para móviles */
+      @media screen and (max-width: 600px) {
+        .footer-content {
+          text-align: none;
+          margin: 0px 30px;
+        }
+  
+        .hero h1 {
+          font-size: 1.4rem;
+          margin: 0px auto;
+        }
+      }
+  
+      @media screen and (max-width: 768px) {
+        .whatsapp-float {
+          width: 50px;
+          height: 50px;
+          bottom: 30px;
+          right: 30px;
+        }
+  
+        .whatsapp-icon {
+          width: 30px;
+          height: 30px;
+        }
+  
+        .nav-menu {
+          display: none;
+        }
+  
+        .hero h1 {
+          font-size: 1.4rem;
+          margin: 0px auto;
+        }
+  
+        .hero h2 {
+          font-size: 1.4rem;
+          letter-spacing: 1px;
+        }
+  
+        .article-header h1 {
+          font-size: 1.4rem;
+          letter-spacing: 1px;
+        }
+      }

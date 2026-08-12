@@ -1,0 +1,39 @@
+:root {
+    --aspect-ratio: 16 / 9;
+}
+
+.carrusel {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto;
+    overflow: hidden; /* Corta lo que sobresale */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.carrusel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+    /*aspect-ratio: var(--aspect-ratio);*/
+}
+
+.carrusel-track img {
+    min-width: 100%; /* Cada imagen ocupa el 100% del contenedor */
+    /*object-fit: cover;*/
+    height: 350px;
+    border-radius: 0 0 10px 10px;
+    flex-shrink: 0;
+}
+
+.contenedor-imagen {
+    position: relative; /* Define el área donde se moverá el texto */
+    display: inline-block; /* Ajusta el contenedor al tamaño de la imagen */
+}
+
+/* Responsive fluido */
+@media (max-width: 600px) {
+    :root { --aspect-ratio: 4 / 3; }
+    .nav-btn { display: none; } /* Ocultar flechas en móviles pequeños */
+}
