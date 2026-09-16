@@ -1,7 +1,11 @@
-
         body {
-            font-family: 'Fredoka', sans-serif;
-            overflow-x: hidden
+            background-image: url('./camera/combinada.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: cover;
+            min-height: 100vh;
+            margin: 0;
         }
 
         .hero {
