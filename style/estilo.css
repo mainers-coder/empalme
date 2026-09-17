@@ -1,9 +1,15 @@
         body {
-            background-image: url('./camera/combinada.png');
+            /* Ruta a tu imagen */
+             /*background-image: url('./camera/combinada.png');*/
+            /* Evita que la imagen se repita como mosaico */
             background-repeat: no-repeat;
+            /* Centra la imagen horizontal y verticalmente */
             background-position: center center;
+            /* Deja el fondo fijo al hacer scroll (opcional, queda muy bien) */
             background-attachment: fixed;
+            /* HACE QUE SEA RESPONSIVE: Estira la imagen para cubrir toda la pantalla sin perder proporción */
             background-size: cover;
+            /* Asegura que el cuerpo ocupe al menos el 100% de la altura de la pantalla */
             min-height: 100vh;
             min-width: 100vw;
             margin: 0;
